@@ -12,7 +12,7 @@ $("#gif-search").on("submit", async function(e){
 function getRandomGif(result) {
     let randomInx = Math.floor(Math.random() * 50);
     let newDiv = $("<div>", {class: "col-lg-4 col-12 mb-4"})
-    let newImg = $("<img>", {src: result.data.data[randomInx].images.original.url})    
+    let newImg = $("<img>", {src: result.data.data[randomInx].images.original.url, class: "w-100"})    
     console.log(newImg);
     newDiv.append(newImg);
     $("#imgContainer").append(newDiv)
